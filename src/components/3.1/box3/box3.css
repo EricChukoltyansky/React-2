@@ -1,0 +1,9 @@
+.box3 {
+  background-color: pink;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,7 @@
+.box4 {
+  background-color: purple;
+  width: 200px;
+  height: 100px;
+  margin-top: 10px;
+  display: flex;
+}

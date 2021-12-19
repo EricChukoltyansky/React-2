@@ -1,0 +1,11 @@
+.box {
+  border: 1px solid black;
+  height: 300px;
+  width: 200px;
+}
+
+.color {
+  height: 80px;
+  width: 80px;
+  background-color: yellow;
+}

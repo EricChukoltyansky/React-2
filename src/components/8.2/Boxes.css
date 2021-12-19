@@ -1,0 +1,28 @@
+.box {
+  margin-bottom: 20px;
+  transform: translateX(-200px);
+  background: green;
+}
+
+.slideIn {
+  animation: moveBox 2s forwards ease-in;
+}
+
+.slideOut {
+  animation: shit 2s backwards;
+}
+
+@keyframes moveBox {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shit {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50px);
+  }
+}
