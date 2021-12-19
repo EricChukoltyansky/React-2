@@ -49,18 +49,64 @@ const data = [
 ];
 
 export default class DataMessage extends Component {
-  render() {
-    const personNames = data.map((person) => {
-      return <div key={person.id}>{person.name}</div>;
-    });
+  state = {
+    names: [],
+    birth: [],
+    meats: [],
+    fish: [],
+  };
 
-    const before1990 = data.map((person) => {
-      let personBirthArray = person.birthday.split("-");
-      return <div>{personBirthArray[2]}</div>;
+  personNames = (data) => {
+    return data.map((element) => {
+      return <h1>{element.name}</h1>;
     });
+  };
+
+  personNamesState = (data) => {
+    data.map((element) => {
+      this.setState((prevState) => ({
+        names: prevState.names + element.names,
+      }));
+    });
+  };
+
+  getNames = (data) => {
+    return data.map((element) => {
+      return <h1>{element.name}</h1>;
+    });
+  };
+
+  //   before1990 = (data) => {
+  //     return data.map((person) => {
+  //       let personBirthArray = person.birthday.split("-");
+  //       if (personBirthArray[2] < "1990") {
+  //         this.setState((prevState) => ({
+  //           birth: prevState.birth + personBirthArray[2],
+  //         }));
+  //       }
+  //       return <div key={person.id}>{personBirthArray[2]}</div>;
+  //     });
+  //   };
+
+  //   favouriteMeats = (data) => {
+  //     return data.map((person) => {
+  //       this.setState((prevState) => ({
+  //         meats: prevState.favouriteMeats + person.favoriteFoods.meats,
+  //       }));
+  //       return <div key={person.id}>{data.favoriteFoods.meats}</div>;
+  //     });
+  //   };
+
+  //   favouriteFish = data.map((person) => {
+  //     this.setState({
+  //       meats: person.favoriteFoods.fish,
+  //     });
+
+  render() {
     return (
       <>
-        ({personNames} {before1990})
+        <h1>{this.personNames(data)}</h1>
+        <h1>{this.getNames(data)}</h1>
       </>
     );
   }
