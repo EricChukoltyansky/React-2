@@ -53,6 +53,15 @@ export default class DataMessage extends Component {
     const personNames = data.map((person) => {
       return <div key={person.id}>{person.name}</div>;
     });
-    return <>{personNames}</>;
+
+    const before1990 = data.map((person) => {
+      let personBirthArray = person.birthday.split("-");
+      return <div>{personBirthArray[2]}</div>;
+    });
+    return (
+      <>
+        ({personNames} {before1990})
+      </>
+    );
   }
 }
