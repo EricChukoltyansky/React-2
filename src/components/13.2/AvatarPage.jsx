@@ -10,7 +10,7 @@ export default class AvatarPage extends Component {
 
   fetchData = async () => {
     let response = await axios.get("https://randomuser.me/api/", {
-      params: { results: 10 },
+      params: { results: 20 },
     });
 
     this.setState({
@@ -29,10 +29,10 @@ export default class AvatarPage extends Component {
   };
 
   dynamicSearch = () => {
-    let found = this.state.info.name.first.filter((person) =>
-      person.toLowerCase().includes(this.state.inputValue.toLocaleLowerCase())
-    );
-    console.log(found);
+    return this.state.info.name.first.filter((person) => {
+      const fullName = person.name.first + " " + person.name.last;
+      return fullName.toLowerCase().includes(this.state.inputValue.toLocaleLowerCase());
+    });
   };
 
   cardRender = () => {

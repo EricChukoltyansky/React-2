@@ -1,11 +1,11 @@
 import "./App.css";
-import AvatarPage from "./components/13.2/AvatarPage";
 
+import CustomTextInput from "./components/14.1/CustomTextInput";
 
 function App() {
   return (
     <>
-      <AvatarPage />
+      <CustomTextInput />
     </>
   );
 }
