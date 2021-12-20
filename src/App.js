@@ -1,11 +1,12 @@
 import "./App.css";
 
-import CustomTextInput from "./components/14.1/CustomTextInput";
+
+import TextArea2 from "./components/14.2/TextArea2";
 
 function App() {
   return (
     <>
-      <CustomTextInput />
+      <TextArea2 />
     </>
   );
 }
