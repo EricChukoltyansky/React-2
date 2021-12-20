@@ -106,7 +106,7 @@ export default class DataMessage extends Component {
     return (
       <>
         <h1>{this.personNames(data)}</h1>
-        <h1>{this.getNames(data)}</h1>
+        <h1></h1>
       </>
     );
   }

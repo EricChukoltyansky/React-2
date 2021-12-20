@@ -1,10 +1,11 @@
 import "./App.css";
-import DataMessage from "./components/13.1/DataMessage";
+import AvatarPage from "./components/13.2/AvatarPage";
+
 
 function App() {
   return (
     <>
-      <DataMessage />
+      <AvatarPage />
     </>
   );
 }
