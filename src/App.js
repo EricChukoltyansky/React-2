@@ -1,12 +1,10 @@
 import "./App.css";
-
-
-import TextArea2 from "./components/14.2/TextArea2";
+import CommerceDisplay from "./components/16.1/CommerceDisplay";
 
 function App() {
   return (
     <>
-      <TextArea2 />
+      <CommerceDisplay />
     </>
   );
 }

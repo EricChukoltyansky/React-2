@@ -7,14 +7,14 @@ class CustomTextArea extends React.Component {
 
   textInput = React.createRef();
 
-  copyTextToClipboard = async (text) => {
-    const el = this.textInput;
-    if (el) {
-      return await navigator.clipboard.writeText(text);
-    } else {
-      return document.execCommand("copy", true, text);
-    }
-  };
+  // copyTextToClipboard = async (text) => {
+  //   // const el = this.textInput;
+  //   if (el) {
+  //     return await navigator.clipboard.writeText(text);
+  //   } else {
+  //     return document.execCommand("copy", true, text);
+  //   }
+  // };
 
   handleCopyClick = () => {
     this.copyTextToClipboard()
