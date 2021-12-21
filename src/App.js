@@ -1,11 +1,10 @@
 import "./App.css";
-import TodoList from "./components/Todo-CRUD/components/TodoList/TodoList";
-
+import TodoApp from "./components/Todo-CRUD/TodoApp";
 
 function App() {
   return (
     <>
-      <TodoList />
+      <TodoApp />
     </>
   );
 }
