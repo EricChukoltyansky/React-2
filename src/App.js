@@ -1,10 +1,11 @@
 import "./App.css";
-import TodoApp from "./components/Todo-CRUD/TodoApp";
+import AppDisplay from "./components/18.1/AppDisplay";
+
 
 function App() {
   return (
     <>
-      <TodoApp />
+      <AppDisplay />
     </>
   );
 }

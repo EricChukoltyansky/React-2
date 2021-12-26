@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import "./styles.css";
+import "./styles.css";
 
 export default function App() {
   const [todos, setTodos] = useState(() => {
@@ -10,6 +10,8 @@ export default function App() {
       return [];
     }
   });
+
+//   state = {todo: ""}
   const [todo, setTodo] = useState("");
   // boolean state to know if we are editing (this will let us display
   // different inputs based on a condition (conditional rendering)
@@ -29,7 +31,9 @@ export default function App() {
   function handleEditInputChange(e) {
     // set the new state value to what's currently in the edit input box
     setCurrentTodo({ ...currentTodo, text: e.target.value });
-    console.log(currentTodo);
+    // console.log("{ ...currentTodo }:", { ...currentTodo });
+    // console.log("currentTodo", currentTodo);
+    // console.log("e.target.value:", e.target.value);
   }
 
   function handleFormSubmit(e) {
@@ -52,6 +56,8 @@ export default function App() {
     e.preventDefault();
 
     handleUpdateTodo(currentTodo.id, currentTodo);
+    console.log("currentTodo.id", currentTodo.id);
+    console.log("currentTodo", currentTodo);
   }
 
   function handleDeleteClick(id) {
@@ -69,6 +75,7 @@ export default function App() {
     const updatedItem = todos.map((todo) => {
       return todo.id === id ? updatedTodo : todo;
     });
+    console.log("todos",todos)
     // set editing to false because this function will be used inside a onSubmit function - which means the data was submited and we are no longer editing
     setIsEditing(false);
     // update the todos state with the updated todo
@@ -80,7 +87,7 @@ export default function App() {
     // set editing to true
     setIsEditing(true);
     // set the currentTodo to the todo item that was clicked
-    setCurrentTodo({ ...todo });
+    setCurrentTodo(todo);
   }
 
   return (
